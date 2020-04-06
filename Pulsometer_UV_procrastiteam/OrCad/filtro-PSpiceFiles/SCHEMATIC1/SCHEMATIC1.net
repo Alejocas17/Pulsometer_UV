@@ -1,0 +1,33 @@
+* source FILTRO
+V_V2         N07270 0   PWL   
++ FILE "C:\Users\alejo\Desktop\pulso_orcad_ruido.txt" 
+R_R1         N00531 N00516  27k  
+R_R2         N00516 N00546  27k  
+R_R3         N00542 N00932  15k  
+C_C1         N00531 N00542  100n   
+C_C2         N00542 N00546  100n   
+C_C3         0 N00516  220n   
+X_U1A         N00546 N00932 VCC -VCC N00932 LM124
+V_V3         VCC 0 12
+V_V4         0 -VCC 12
+R_R4         N00932 N01407  8.2  
+C_C4         0 N01407  10m   
+R_R5         N03967 N03955  4k TC=0,0 
+X_U2         N07270 0 N00531 0 N03955 N03967 VCC -VCC  AD627A/AD
+R_R6         N07962 VCC  0.5k TC=0,0 
+R_R8         0 N01407  100k TC=0,0 
+R_R9         0 N07966  150 TC=0,0 
+C_C7         N07962 N09117  4700u   
+R_R10         N01407 VCC  200k TC=0,0 
+X_M3         N07962 N01407 N07966 2N7000KL
+C_C6         0 N07966  470u   
+R_R11         0 N09117  100k TC=0,0 
+V_V8         VI 0 DC 0Vdc AC 1Vac 
+C_C9         0 VO  10m   
+R_R14         VI VO  8.2  
+R_R15         N09117 N18511  15 TC=0,0 
+R_R16         N18497 N18635  100k TC=0,0 
+R_R17         0 N18497  100k TC=0,0 
+C_C11         N18511 N18497  100u  TC=0,0 
+C_C12         0 N18511  0.1m  TC=0,0 
+V_V9         0 N18635 3.3V

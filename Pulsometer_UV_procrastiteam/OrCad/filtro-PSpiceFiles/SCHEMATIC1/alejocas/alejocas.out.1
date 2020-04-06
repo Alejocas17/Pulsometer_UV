@@ -1,0 +1,78 @@
+
+**** 04/05/20 23:41:27 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-alejocas"  [ C:\Users\alejo\Desktop\Universidad Del Valle\Sexto Semestre\Circuitos Electronicos\OrCad\filtro
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "alejocas.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.3\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC LIN 1000 1 1k
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source FILTRO
+V_V2         N07270 0   PWL   
++ FILE "C:\Users\alejo\Desktop\pulso_orcad_ruido.txt" 
+R_R1         N00531 N00516  27k  
+R_R2         N00516 N00546  27k  
+R_R3         N00542 N00932  15k  
+C_C1         N00531 N00542  100n   
+C_C2         N00542 N00546  100n   
+C_C3         0 N00516  220n   
+X_U1A         N00546 N00932 VCC -VCC N00932 LM124
+V_V3         VCC 0 12
+V_V4         0 -VCC 12
+R_R4         N00932 N01407  8.2  
+C_C4         0 N01407  10m   
+R_R5         N03967 N03955  4k TC=0,0 
+X_U2         N07270 0 N00531 0 N03955 N03967 VCC -VCC  AD627A/AD
+R_R6         N07962 VCC  0.5k TC=0,0 
+R_R8         0 N01407  100k TC=0,0 
+R_R9         0 N07966  150 TC=0,0 
+C_C7         N07962 N09117  4700u   
+R_R10         N01407 VCC  200k TC=0,0 
+X_M3         N07962 N01407 N07966 2N7000KL
+C_C6         0 N07966  470u   
+R_R11         0 N09117  100k TC=0,0 
+R_R7         N09117 N09656  15  
+C_C8         0 N09656  0.1m   
+V_V5         0 N11784 2.5
+C_C5         N09656 N11788  100u   
+R_R12         N11788 N11784  100k TC=0,0 
+R_R13         0 N11788  100k TC=0,0 
+V_V6         VCC N14668 12
+X_U3A         N13791 N13955 VCC -VCC N13955 LM124
+C_C11         0 N13767  220n   
+R_R14         N13781 N13767  27k  
+V_V7         0 -VCC 12
+C_C10         N13787 N13791  100n   
+R_R16         N13787 N13955  15k  
+C_C9         N13781 N13787  100n   
+R_R15         N13767 N13791  27k  
+V_V8         M_UN0001 0 DC 0Vdc AC 1Vac 
+R_R17         0 N14668  1k TC=0,0 
+
+**** RESUMING alejocas.cir ****
+.END
+
+ERROR -- Voltage source and/or inductor loop involving V_V7
+You may break the loop by adding a series resistance

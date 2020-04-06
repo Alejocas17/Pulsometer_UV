@@ -1,0 +1,4 @@
+ lib=C:\Cadence\SPB_16.3\tools\PSpice\Library\opamp.lib, offset=35378, size=1861
+ lib=C:\Cadence\SPB_16.3\tools\PSpice\Library\anlg_dev.lib, offset=170923, size=789
+ lib=C:\Cadence\SPB_16.3\tools\PSpice\Library\siliconix.lib, offset=227, size=1189
+ lib=C:\Cadence\SPB_16.3\tools\PSpice\Library\anlg_dev.lib, offset=171713, size=2227
