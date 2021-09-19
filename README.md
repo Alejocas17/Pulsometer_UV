@@ -1,2 +1,4 @@
 # Pulsometer_UV
-aaaaaa
+This repository contains the electronic design for a pulsometer.
+
+It contains OrCad design Files and SolidWorks physical model
